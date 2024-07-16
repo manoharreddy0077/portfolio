@@ -1,0 +1,131 @@
+/* styles.css */
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #d4d4d4;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+.container.left {
+  left: 0;
+}
+.container.right {
+  left: 50%;
+}
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+
+/* ****** about section ***** */
+.content:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.resume-btn {
+  background-color: #1d4ed8;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+.resume-btn:hover {
+  background-color: #2563eb;
+}
+
+/* ****** about section ***** */
+
+/* project section ******************************** */
+.project-list-item {
+  position: relative;
+  margin: 1rem 0;
+  padding: 1rem;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+}
+.project-list-item:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 100px;
+  background-color: gray;
+}
+.project-details {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  z-index: 10;
+}
+.project-list-item:hover .project-details {
+  display: block;
+}
+.tech-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 0.3rem;
+  vertical-align: middle;
+}
+
+/* ****** project section ***** */
