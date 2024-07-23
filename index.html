@@ -6,133 +6,202 @@
   <title>Manohar S Portfolio</title>
   <link href="https://unpkg.com/tailwindcss@^2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+ <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">  <!--   for data-dos -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!--   for icons gmail mobile  -->
+ 
 </head>
 <body class="bg-gray-100 text-gray-900">
 
   <!-- Navbar -->
-  <nav class="bg-white shadow-lg">
+  <nav class="bg-white shadow-lg sticky-nav">
     <div class="max-w-6xl mx-auto px-4">
-      <div class="flex justify-between">
-        <div class="flex space-x-7">
-          <div>
-            <!-- Website Logo -->
-            <a href="#" class="flex items-start py-4 px-2">
-              <span class="font-semibold text-gray-500 text-lg">Manohar S</span>
-            </a>
-          </div>
+        <div class="flex justify-between items-center">
+            <div class="flex items-center space-x-7">
+                <!-- Website Logo and Profile Image -->
+                <a href="#" class="flex items-center py-4 px-2">
+                    <!-- <img src="images/pic.jpeg" alt="Profile Image" class="profile-image"> -->
+                    <span class="font-semibold text-gray-700 text-lg">S Manohar</span>
+                </a>
+                <!-- Contact Icons -->
+                <div class="flex items-center space-x-4">
+                    <a href="mailto:manoharreddys20032009@gmail.com" class="text-gray-700 hover:text-blue-500">
+                        <i class="fas fa-envelope fa-lg"></i>
+                    </a>
+                    <a href="tel:+918867460462" class="text-gray-700 hover:text-blue-500">
+                        <i class="fas fa-phone-alt fa-lg"></i>
+                    </a>
+                    <a href="https://github.com/manoharreddy" class="text-gray-700 hover:text-blue-500" target="_blank">
+                        <i class="fab fa-github fa-lg"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Primary Navbar items -->
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="#About" class="py-4 px-2 text-gray-700 border-b-4 border-transparent hover:border-blue-500 transition duration-300">About</a>
+                <a href="#Education" class="py-4 px-2 text-gray-700 border-b-4 border-transparent hover:border-blue-500 transition duration-300">Education</a>
+                <a href="#projects" class="py-4 px-2 text-gray-700 border-b-4 border-transparent hover:border-blue-500 transition duration-300">Projects</a>
+                <a href="#skills" class="py-4 px-2 text-gray-700 border-b-4 border-transparent hover:border-blue-500 transition duration-300">Skills</a>
+                <a href="#achievements" class="py-4 px-2 text-gray-700 border-b-4 border-transparent hover:border-blue-500 transition duration-300">Achievements</a>
+                <a href="#thanks" class="py-4 px-2 text-gray-700 border-b-4 border-transparent hover:border-blue-500 transition duration-300">Contact</a>
+            </div>
         </div>
-        <!-- Primary Navbar items -->
-        <div class="hidden md:flex items-end space-x-1">
-          <a href="#About" class="py-4 px-2 text-gray-500 border-b-4 border-transparent hover:border-blue-500 transition duration-300">About</a>
-          <a href="#Education" class="py-4 px-2 text-gray-500 border-b-4 border-transparent hover:border-blue-500 transition duration-300">Education</a>
-          <a href="#projects" class="py-4 px-2 text-gray-500 border-b-4 border-transparent hover:border-blue-500 transition duration-300">Projects</a>
-          <a href="#skills" class="py-4 px-2 text-gray-500 border-b-4 border-transparent hover:border-blue-500 transition duration-300">Skills</a>
-          <a href="#achievements" class="py-4 px-2 text-gray-500 border-b-4 border-transparent hover:border-blue-500 transition duration-300">Achievements</a>
-          <a href="#thanks" class="py-4 px-2 text-gray-500 border-b-4 border-transparent hover:border-blue-500 transition duration-300">Contact</a>
-        </div>
-      </div>
     </div>
-  </nav>
+</nav>
+
 
   <!-- Hero Section -->
-<!-- Hero Section -->
-<section class="bg-gray-200 h-screen flex items-center justify-center relative">
-    <div class="max-w-6xl mx-auto px-4 text-center w-3/5">
+  <section class="bg-gray-200 h-screen flex items-center justify-center relative">
+    <div class="max-w-6xl mx-auto px-4 text-left w-3/5" data-aos="slide-right" data-aos-duration="1000">
       <h1 class="text-4xl font-bold text-gray-800">Welcome to My Portfolio</h1>
       <p class="mt-4 text-gray-600">I'm a 4th-year Computer Science student and a web developer.</p>
     </div>
     <!-- Large SVG Icon -->
-    <svg class="absolute right-0 h-3/4 w-auto text-blue-500 opacity-30" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M12 2L2 7l10 5 10-5-10-5zm0 10L2 17l10 5 10-5-10-5z" />
+    <svg class="absolute right-10 h-3/4 w-auto text-blue-500 opacity-70" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-aos="slide-left" data-aos-duration="1500">
+      <path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/>
     </svg>
   </section>
+  
   
   
 
   <!-- About Section -->
   <section id="About" class="py-20 bg-blue-50">
     <div class="container mx-auto flex flex-col md:flex-row items-center text-center md:text-left">
-      <div class="md:w-1/3 mb-6 md:mb-0">
+      <div class="md:w-1/3 mb-6 md:mb-0" data-aos="slide-right" data-aos-duration="1500">
         <img src="/images/image.png" alt="Your Name" class="w-55 h-60 mx-10 md:mx-0 rounded-full shadow-lg">
       </div>
       <div class="md:w-2/3 md:pl-10">
         <h2 class="text-3xl font-bold mb-4">About Me</h2>
-        <p class="text-lg text-gray-700 mb-4">I am S Manohar, a 4th-year Computer Science student with a passion for developing efficient and innovative software solutions. I have a strong background in various programming languages and technologies, and I am eager to contribute to impactful projects.</p>
-        <a href="path/to/your_resume.pdf" class="resume-btn inline-block" download>Download Resume</a>
+        <p class="text-lg text-gray-700 mb-4" >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit, perferendis qui? Amet, earum sit. Error quod laborum sit blanditiis harum dicta itaque facere minus at? Quae, doloremque. Vitae, dignissimos repellat! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos, et? Quas, possimus consequuntur autem libero ex magnam accusantium rem eaque laudantium voluptate? Nemo corporis quibusdam labore tempore quod, inventore provident?</p>
+        <a href="path/to/your_resume.pdf" class="resume-btn inline-block" download data-aos="fade-up" data-aos-duration="1500">Download Resume</a>
       </div>
     </div>
   </section>
 
   <!-- Education Section -->
-  <section  id="Education"class="timeline py-20">
+  
+  <h2  class="text-3xl font-bold text-gray-800 text-center">Education</h2>
+ <section id="Education" class="timeline py-20 ">
+  <!-- <h2 class="text-3xl font-bold text-gray-800 text-center">Education</h2> -->
     <div class="container left">
-      <div class="content bg-blue-100">
-        <h2 class="text-2xl font-bold">PES University</h2>
-        <p class="text-gray-700">2021 - Present</p>
-        <p>Bachelor of Technology in Computer Science (GPA: 8.68)</p>
-        <p>Bengaluru, Karnataka</p>
-        <p>Relevant Coursework: Data Structures and Algorithms (C++), Computer Networks, Operating System, Database Management System and Technologies, Object Oriented Programming, Software Engineering.</p>
-      </div>
+        <div class="content bg-gradient-to-r from-blue-300 to-blue-100" data-aos="slide-right" data-aos-duration="1500">
+            <h2 class="text-2xl font-bold">PES University</h2>
+            <p class="text-gray-700">2021 - Present</p>
+            <p>Bachelor of Technology in Computer Science (GPA: 8.68)</p>
+            <p>Bengaluru, Karnataka</p>
+        </div>
     </div>
     <div class="container right">
-      <div class="content bg-green-100">
-        <h2 class="text-2xl font-bold">Jnanaamrutha PU College</h2>
-        <p class="text-gray-700">2019 - 2021</p>
-        <p>II PUC - PCMC (Percentage: 95.83)</p>
-        <p>Bellari, Karnataka</p>
-      </div>
+        <div class="content bg-gradient-to-r from-blue-300 to-blue-100" data-aos="slide-right" data-aos-duration="1500">
+            <h2 class="text-2xl font-bold">Jnanaamrutha PU College</h2>
+            <p class="text-gray-700">2019 - 2021</p>
+            <p>II PUC - PCMC (Percentage: 95.83)</p>
+            <p>Bellari, Karnataka</p>
+        </div>
     </div>
     <div class="container left">
-      <div class="content bg-yellow-100">
-        <h2 class="text-2xl font-bold">Shree Nandi Residential Public School</h2>
-        <p class="text-gray-700">2019</p>
-        <p>X Class - ICSE (Percentage: 88.60)</p>
-        <p>Bellari, Karnataka</p>
-      </div>
+        <div class="content bg-gradient-to-r from-blue-300 to-blue-100 " data-aos="slide-right" data-aos-duration="1500">
+            <h2 class="text-2xl font-bold">Shree Nandi Residential Public School</h2>
+            <p class="text-gray-700">2019</p>
+            <p>X Class - ICSE (Percentage: 88.60)</p>
+            <p>Bellari, Karnataka</p>
+        </div>
     </div>
-  </section>
+</section>
+
 
   <!--  project section  -->
-  <section id="projects" class="py-20">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Projects</h2>
-      <div>
-        <div class="project-list-item">
-          <h3 class="text-xl font-semibold">WebRight</h3>
-          <p>
-            <img src="/images/HTML5.svg" alt="HTML" class="tech-icon"> HTML, 
-            <img src="/images/CSS3.svg" alt="CSS" class="tech-icon"> CSS, 
-            <img src="/images/JavaScript.svg" alt="JavaScript" class="tech-icon"> JavaScript
-          </p>
-          <div class="project-details">
-            <p>Designed and implemented the website layout using semantic HTML and modern CSS techniques for a clean, responsive design. Added interactivity and dynamic content using JavaScript. Ensured compatibility across various devices and screen sizes using media queries and flexible grids.</p>
-          </div>
+  <section id="projects" class="py-20 bg-gray-200">
+    <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Projects</h2>
+        <div class="projects-container">
+            <!-- Project Card 1 -->
+            <div class="project-list-item bg-gray-400">
+                <div class="project-card-inner">
+                    <div class="project-card-front">
+                        <h3 class="text-xl font-bold">WebRight</h3>
+                        <img src="/images/webright.jpeg" alt="WebRight Banner" class="project-banner">
+                        <p class="techstack">
+                            <img src="/images/HTML5.svg" alt="HTML" class="tech-icon"> HTML,
+                            <img src="/images/CSS3.svg" alt="CSS" class="tech-icon"> CSS,
+                            <img src="/images/JavaScript.svg" alt="JavaScript" class="tech-icon"> JavaScript
+                        </p>
+                    </div>
+                    <div class="project-card-back">
+                        <ul class="project-details-list">
+                            <li>Designed and implemented the website layout using semantic HTML and modern CSS techniques for a clean, responsive design.</li>
+                            <li>Added interactivity and dynamic content using JavaScript.</li>
+                            <li>Ensured compatibility across various devices and screen sizes using media queries and flexible grids.</li>
+                            <li><a href="http://example.com/webright" target="_blank">Click Here to View the Site</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Project Card 2 -->
+            <div class="project-list-item bg-gray-400">
+                <div class="project-card-inner">
+                    <div class="project-card-front">
+                        <h3 class="text-xl font-bold">CampusEats</h3>
+                        <img src="/images/campuseats.jpeg" alt="CampusEats Banner" class="project-banner">
+                        <p class="techstack">
+                            <img src="/images/React.svg" alt="ReactJS" class="tech-icon"> ReactJS,
+                            <img src="/images/Redux.svg" alt="Redux" class="tech-icon"> Redux,
+                            <img src="/images/Tailwind CSS.svg" alt="Tailwind CSS" class="tech-icon"> Tailwind CSS,
+                            <img src="/images/Node.js.svg" alt="Node.js" class="tech-icon"> Node.js,
+                            <img src="/images/Express.svg" alt="Express.js" class="tech-icon"> Express.js,
+                            <img src="/images/MongoDB.svg" alt="MongoDB" class="tech-icon"> MongoDB,
+                            <img src="/images/JWT.png" alt="JWT" class="tech-icon"> JWT
+                        </p>
+                    </div>
+                    <div class="project-card-back">
+                        <ul class="project-details-list">
+                            <li>Developed the user interface using ReactJS and styled components with regular CSS.</li>
+                            <li>Implemented server-side logic and RESTful APIs using Node.js and Express.</li>
+                            <li>Utilized JWT-based authentication for secure user login and encrypted password storage.</li>
+                            <li>Used MongoDB to manage user data, orders, and other relevant information.</li>
+                            <li><a href="http://example.com/campuseats" target="_blank">Click Here to View the Site</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Project Card 3 -->
+            <div class="project-list-item bg-gray-400">
+                <div class="project-card-inner">
+                    <div class="project-card-front">
+                        <h3 class="text-xl font-bold">SlowMoHeadlines</h3>
+                        <img src="/images/slowmoheadlines.jpeg" alt="Prajavani News Banner" class="project-banner">
+                        <p class="techstack">
+                            <img src="/images/Node.js.svg" alt="Node.js" class="tech-icon"> Node.js,
+                            <img src="/images/Express.svg" alt="Express.js" class="tech-icon"> Express.js,
+                            <img src="/images/React.svg" alt="ReactJS" class="tech-icon"> ReactJS,
+                            <img src="/images/axios.png" alt="Axios" class="tech-icon"> Axios,
+                            <img src="/images/cheerio.jpeg" alt="Cheerio" class="tech-icon"> Cheerio,
+                            <img src="/images/Tailwind CSS.svg" alt="Tailwind CSS" class="tech-icon"> Tailwind CSS
+                        </p>
+                    </div>
+                    <div class="project-card-back">
+                        <ul class="project-details-list">
+                            <li>Backend Development: Developed a RESTful API using Node.js and Express.js to fetch and serve district-specific news data.</li>
+                            <li>Web Scraping: Implemented web scraping using Axios and Cheerio to extract news content from external sources dynamically.</li>
+                            <li>Frontend Development: Built a ReactJS frontend to display news articles with features like language selection, district selection, and theme toggling.</li>
+                            <li>Responsive Design: Used Tailwind CSS to ensure a modern, user-friendly, and visually appealing interface that adapts to different screen sizes.</li>
+                            <li><a href="http://example.com/prajavani-news" target="_blank">Click Here to View the Site</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more project cards as needed -->
         </div>
-        <div class="project-list-item">
-          <h3 class="text-xl font-semibold">CampusEats</h3>
-          <p>
-            <img src="/images/React.svg" alt="ReactJS" class="tech-icon"> ReactJS, 
-            <img src="/images/Redux.svg" alt="ReactJS" class="tech-icon"> Redux, 
-            <img src="/images/Tailwind CSS.svg" alt="Tailwind CSS" class="tech-icon"> Tailwind CSS, 
-            <img src="/images/Node.js.svg" alt="Node.js" class="tech-icon"> Node.js, 
-            <img src="/images/Express.svg" alt="Express.js" class="tech-icon"> Express.js, 
-            <img src="/images/MongoDB.svg" alt="MongoDB" class="tech-icon"> MongoDB, 
-            <img src="/images/JWT.png" alt="JWT" class="tech-icon"> JWT
-          </p>
-          <div class="project-details">
-            <p>Developed the user interface using ReactJS and styled components with regular CSS. Implemented server-side logic and RESTful APIs using Node.js and Express. Utilized JWT-based authentication for secure user login and encrypted password storage. Used MongoDB to manage user data, orders, and other relevant information.</p>
-          </div>
-        </div>
-        <!-- Add more projects as needed -->
-      </div>
     </div>
-  </section>
+</section>
+
+
   <!-- Skills Section -->
   <!-- Skills Section -->
-<section id="skills" class="bg-gray-200 py-20">
+<section id="skills" class="bg-gray-200  py-20 ">
     <div class="max-w-4xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold text-gray-800">Skills</h2>
-      <div class="flex flex-wrap justify-center mt-4">
+      <h2 class="text-3xl font-bold text-gray-800" >Skills</h2>
+      <div class="flex flex-wrap justify-center mt-4" data-aos="fade-up" data-aos-duration="1500">
         <div class="m-4">
           <div class="flex items-center">
             <img src="/images//C.svg" alt="C" class="w-10 h-10 transform transition-transform duration-500 hover:rotate-12" />
@@ -235,51 +304,73 @@
   
 
   <!-- Achievements Section -->
-  <!-- Achievements Section -->
-<section id="achievements" class="py-20 bg-white shadow-lg">
+  <section id="certifications-achievements" class="py-20 bg-gray-200 shadow-lg">
     <div class="max-w-4xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold text-gray-800 mb-6">Achievements</h2>
-      <div class="mt-8 text-left space-y-4">
-        <div class="p-4 bg-blue-100 rounded-lg shadow-md">
-          <p class="text-gray-600">Received MRD Scholarship four times for ranking in the top 20% based on CGPA criteria.</p>
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">Certifications & Achievements</h2>
+        <div class="mt-8 text-left space-y-4" data-aos="fade-up" data-aos-duration="1500">
+            <!-- Certifications Section -->
+            <div class="p-4 bg-blue-100 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Certifications</h3>
+                <ul class="list-disc list-inside text-gray-600">
+                    <li><strong>JavaScript (Basic) Certificate</strong> - HackerRank</li>
+                    <li><strong>Silver Badge (4 stars) for C Programming</strong> - HackerRank</li>
+                </ul>
+            </div>
+
+            <!-- Achievements Section -->
+            <div class="p-4 bg-blue-100 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Achievements</h3>
+                <ul class="list-disc list-inside text-gray-600">
+                    <li>Received <strong>MRD Scholarship</strong> four times for ranking in the top 20% based on CGPA criteria.</li>
+                    <li>Participated in various coding competitions and <strong>hackathons</strong>, securing top positions.</li>
+                    <li>Completed several online courses on platforms like Coursera and Udemy to enhance skills.</li>
+                </ul>
+            </div>
         </div>
-        <div class="p-4 bg-blue-100 rounded-lg shadow-md">
-          <p class="text-gray-600">Participated in various coding competitions and hackathons, securing top positions.</p>
-        </div>
-        <div class="p-4 bg-blue-100 rounded-lg shadow-md">
-          <p class="text-gray-600">Completed several online courses on platforms like Coursera and Udemy to enhance skills.</p>
-        </div>
-      </div>
     </div>
-  </section>
+</section>
+
+
   
 
-  <!-- Contact Section -->
-   <!-- Thanks for Visiting Section -->
-   <section id="thanks" class="bg-gray-200 py-20">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold text-gray-800">Thanks for Visiting!</h2>
-      <div class="mt-8 text-gray-600">
-        <p>If you have any questions or would like to connect, feel free to reach out!</p>
-        <p class="mt-4">Email: <a href="mailto:manoharreddys20032009@gmail.com" class="text-blue-500 hover:underline">manoharreddys20032009@gmail.com</a></p>
-        <p>Mobile: <span class="text-gray-800">+91 88674 60462</span></p>
-        <div class="flex justify-center mt-4">
-          <a href="https://github.com/manoharreddy" class="text-gray-800 hover:text-blue-500 mr-4" target="_blank">
-            <i class="fab fa-github fa-2x"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/manohar-s-123456789/" class="text-gray-800 hover:text-blue-500" target="_blank">
-            <i class="fab fa-linkedin fa-2x"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <footer class="bg-white py-4">
-    <div class="max-w-6xl mx-auto text-center">
-      <p class="text-gray-600">© 2024 Manohar S. All rights reserved.</p>
+   <!-- Thanks for Visiting Section -->
+   <footer class="bg-black py-8">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+        <!-- Footer Content -->
+        <div class="text-gray-200 mb-4">
+            <h2 class="text-2xl font-bold mb-4">Get in Touch</h2>
+            <!-- <p class="mb-4">Feel free to reach out if you have any questions or would like to connect!</p> -->
+            <div class="flex justify-center mb-4">
+                <a href="mailto:manoharreddys20032009@gmail.com" class="flex items-center text-gray-200 hover:text-blue-500 mr-6" target="_blank">
+                    <i class="fas fa-envelope fa-2x mr-2"></i>
+                    <span>Email: manoharreddys20032009@gmail.com</span>
+                </a>
+                <a href="tel:+918867460462" class="flex items-center text-gray-200 hover:text-blue-500 mr-6" target="_blank">
+                    <i class="fas fa-phone-alt fa-2x mr-2"></i>
+                    <span>+91 88674 60462</span>
+                </a>
+            </div>
+            <div class="flex justify-center mb-4">
+                <a href="https://github.com/manoharreddy0077" class="text-gray-200 hover:text-blue-500 mr-6" target="_blank">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/manohar-s-123456789/" class="text-gray-200 hover:text-blue-500" target="_blank">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+            </div>
+        </div>
+        <!-- Footer Copyright -->
+        <p class="text-gray-600">S Manohar</p>
     </div>
-  </footer>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" data-aos-delay="50"></script>
+  <script>
+    AOS.init();
+  </script>
 
 </body>
+
 </html>

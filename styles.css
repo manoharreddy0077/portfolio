@@ -14,13 +14,15 @@
 
 .timeline {
   position: relative;
-  max-width: 1200px;
+  max-width: 80%;
   margin: 0 auto;
+  max-height: 60%;
+  
 }
 .timeline::after {
   content: '';
   position: absolute;
-  width: 6px;
+  width: 8px;
   background-color: #d4d4d4;
   top: 0;
   bottom: 0;
@@ -41,7 +43,7 @@
 }
 .content {
   padding: 20px 30px;
-  background-color: white;
+  /* background-color: white; */
   position: relative;
   border-radius: 6px;
 }
@@ -69,13 +71,47 @@
   border-width: 10px 10px 10px 0;
   border-color: transparent white transparent transparent;
 }
+/* Adjusted stops for containers */
+.container.left::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: black; /* Color of the stop */
+  border: 5px solid grey; /* To give a border */
+  border-radius: 50%;
+  top: 15px; /* Adjust based on your design */
+  right: 30px; /* Position it closer to the content */
+  transform: translateX(208%); /* Center it horizontally */
+  z-index: 1;
+}
+
+.container.right::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: black; /* Color of the stop */
+  border: 5px solid grey; /* To give a border */
+  border-radius: 50%;
+  top: 15px; /* Adjust based on your design */
+  left: 30px; /* Position it closer to the content */
+  transform: translateX(-194%); /* Center it horizontally */
+  z-index: 1;
+}
+
+/* .content {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+} */
+.content:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+}
 
 
 /* ****** about section ***** */
-.content:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
+
 .resume-btn {
   background-color: #1d4ed8;
   color: white;
@@ -90,36 +126,70 @@
 /* ****** about section ***** */
 
 /* project section ******************************** */
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+  justify-content: space-between; /* Distribute space evenly */
+  width: 100%; /* Full width of container */
+  margin: 0 auto;
+  max-width: 1200px; /* Optional: Limit max width for better responsiveness */
+  padding: 1rem; /* Add padding around the container */
+  box-sizing: border-box;
+}
+
 .project-list-item {
   position: relative;
-  margin: 1rem 0;
-  padding: 1rem;
-  background: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: calc(33.333% - 1rem); /* Adjust width to fit three items per row with margins */
+  height: 400px; /* Adjust height as needed */
+  margin: 0.5rem; /* Margin between items */
+  /* background: white; Card background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   border-radius: 8px;
   cursor: pointer;
-  transition: box-shadow 0.3s;
+  transition: transform 0.5s, box-shadow 0.3s;
+  overflow: hidden; /* Hide overflow content */
+  perspective: 1000px; /* 3D effect for flipping */
 }
+
 .project-list-item:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  margin-bottom: 100px;
-  background-color: gray;
+  transform: scale(1.05); /* Slight zoom effect on hover */
 }
-.project-details {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
+
+.project-card-inner {
+  position: relative;
   width: 100%;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  padding: 1rem;
-  z-index: 10;
+  height: 100%;
+  transition: transform 0.5s; /* Flip effect duration */
+  transform-style: preserve-3d; /* Preserve 3D effect for flipping */
 }
-.project-list-item:hover .project-details {
-  display: block;
+
+.project-list-item:hover .project-card-inner {
+  transform: rotateY(180deg); /* Flip the card */
 }
+
+.project-card-front, .project-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide the back face when flipped */
+}
+
+.project-card-front {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.project-banner {
+  width: 80%;
+  height: 250px; /* Adjust height as needed */
+  object-fit: cover;
+  /* margin-top: 1rem; */
+}
+
 .tech-icon {
   display: inline-block;
   width: 20px;
@@ -128,4 +198,93 @@
   vertical-align: middle;
 }
 
+.project-card-back {
+  background: white; /* Background color of the back side */
+  color: #333; /* Text color */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+  transform: rotateY(180deg); /* Flip the back side */
+}
+
+.project-details-list {
+  list-style: none; /* Remove default list styling */
+  padding: 0;
+  margin: 0;
+}
+
+.project-details-list li {
+  margin-bottom: 0.5rem;
+}
+
+.project-details-list a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #007bff; /* Primary color */
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.project-details-list a:hover {
+  background-color: #0056b3; /* Darker color on hover */
+}
+.techstack {
+  background-color: white; /* Background color for the tech stack section */
+  border-radius: 8px; /* Rounded corners */
+  padding: 0.5rem; /* Padding around the tech stack content */
+  margin-top: -50px; /* Margin above the tech stack section */
+  display: flex; /* Flexbox for aligning icons and text */
+  flex-wrap: wrap; /* Allow items to wrap onto the next line */
+  gap: 0.5rem; /* Space between items */
+  align-items: center; /* Center items vertically */
+  height: 100px;
+  width: 90%;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.5), 0 -4px 6px rgba(255, 255, 255, 0.3); /* White shadow for top and bottom elevation */ /* White box-shadow for elevation */
+}
+
+
 /* ****** project section ***** */
+
+
+/* ********* navbar section ******** */
+
+.sticky-nav {
+  position: -webkit-sticky; 
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.profile-image {
+  width: 40px; /* Increased size */
+  height: 40px; /* Increased size */
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+
+
+
+/* ********* navbar section ******** */
+
+
+
+
+/* ********* fonts section ******** */
+
+@font-face {
+  font-family: 'CustomFont';
+  src: url('/fonts/fa-brands-400.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* ********* fonts  ******** */
+
+
