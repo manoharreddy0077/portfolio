@@ -1,14 +1,13 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize AOS
+  AOS.init();
 
-  const menuButton = document.querySelector('.mobile-menu-button');
-  const menu = document.querySelector('.mobile-menu');
-
-  if (menuButton && menu) {
-    menuButton.addEventListener('click', () => {
-      alert("oooo")
-      menu.classList.toggle('show');
-    });
-  }
+  // Add event listener for menu toggle button
+  document.getElementById('menu-toggle').addEventListener('click', function() {
+    alert("clicked");
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+  });
 });
 
 
